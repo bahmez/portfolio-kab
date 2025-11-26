@@ -194,6 +194,13 @@ export const Experience = () => {
             const sign = e.object;
             setFocusedSign(sign);
             
+            // Log the sign identifier for debugging and custom offset configuration
+            console.log("Clicked on Sign:", {
+              name: sign.name,
+              uuid: sign.uuid,
+              userData: sign.userData,
+            });
+            
             // Get the world position of the sign
             const signWorldPos = new THREE.Vector3();
             sign.getWorldPosition(signWorldPos);
